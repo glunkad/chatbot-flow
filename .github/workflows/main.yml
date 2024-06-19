@@ -1,5 +1,8 @@
 name: Deploy to GitHub Pages
 
+permissions:
+      pages: write
+      id-token: write
 on:
   push:
     branches:
@@ -10,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    
+    
       - name: Checkout the repository
         uses: actions/checkout@v3
 
@@ -19,10 +24,10 @@ jobs:
           node-version: '20.11.1'  # specify the node version you are using
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
       - name: Build the project
-        run: npm run build
+        run: yarn run build
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
