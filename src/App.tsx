@@ -2,14 +2,9 @@ import './style.css'
 
 import {Navbar, NodesPanel, SettingsPanel, TextNode} from "./components";
 import React, {useCallback, useState} from "react";
-
-
 import 'reactflow/dist/style.css';
 import ReactFlow, {addEdge, Controls, MarkerType, NodeTypes, OnConnect, useEdgesState, useNodesState} from "reactflow";
 
-
-// we define the nodeTypes outside of the component to prevent re-renderings
-// you could also use useMemo inside the component
 const nodeTypes: NodeTypes = {textUpdater: TextNode};
 
 let id = 0;

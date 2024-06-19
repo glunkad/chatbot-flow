@@ -4,12 +4,7 @@ import './style.css'
 import {Node} from "reactflow";
 
 interface SettingsPanelProps {
-    selectedNode: {
-        id: string;
-        data: {
-            label: string;
-        };
-    };
+    selectedNode: Node,
     setIsNodeSelected: (b: boolean) => void,
     setNodes: React.Dispatch<React.SetStateAction<Node<any>[]>>; // Replace 'any' with the specific type if you have it
 }
