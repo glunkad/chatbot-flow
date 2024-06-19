@@ -109,7 +109,7 @@ export const App = () => {
                         onInit={setReactFlowInstance}
                         onDrop={onDrop}
                         onDragOver={onDragOver}
-                        onNodeClick={onNodeClick}
+                        onNodeClick={onNodeClick as any}
                         nodeTypes={nodeTypes}
                         fitView
                     >
@@ -120,7 +120,7 @@ export const App = () => {
                         {isNodeSelected ?
                             (
                                 <div>
-                                    <SettingsPanel selectedNode={selectedNode} setNodes={setNodes}
+                                    <SettingsPanel selectedNode={selectedNode as any} setNodes={setNodes}
                                                    setIsNodeSelected={setIsNodeSelected}/>
                                 </div>
 
