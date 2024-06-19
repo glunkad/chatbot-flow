@@ -1,0 +1,31 @@
+.settings-panel {
+    /*padding: 5px 10px;*/
+}
+
+.settings-data {
+    padding: 5px 10px;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.centered-message {
+    margin: auto;
+}
+
+.arrow-back {
+    height: 20px;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    resize: none;
+}
+

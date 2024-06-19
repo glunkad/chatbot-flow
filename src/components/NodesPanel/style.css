@@ -1,0 +1,19 @@
+.node-panel {
+    padding: 5px 10px;
+}
+
+.dndnode {
+    border: 1.25px solid #646cff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.dndnode img {
+    height: 32px
+}
+
+.dndnode p {
+    color: #646cff;
+}

@@ -1,0 +1,47 @@
+.text-node {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 200px;
+
+}
+.text-node-header {
+    display: flex;
+    align-items: center;
+    background-color: #b2f0e3;;
+    color: black;
+    border-radius: 5px 5px 0 0;
+    justify-content: space-between;
+    padding: 0 5px;
+    height: 24px;
+}
+
+.icon-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-node-body  {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 15px 10px;
+    font-size: 12px;
+}
+
+.text-node img {
+    height: 18px;
+}
+
+.icon-title p {
+    font-size: 12px;
+}
+
+.icon-right {
+    background-color: white;
+    border-radius: 50%;
+    height: 1.2rem;
+}
+

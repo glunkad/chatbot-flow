@@ -1,0 +1,15 @@
+.saved {
+    background: lightgreen;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.not-saved {
+    background: lightcoral;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+}

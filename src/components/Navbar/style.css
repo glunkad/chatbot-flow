@@ -1,0 +1,22 @@
+.navbar {
+    padding: 10px 50px;
+    background-color: #f3f3f3;
+    display: flex;
+}
+.centered-notification {
+    margin: auto;
+}
+.save-button {
+    text-decoration: none;
+    border-radius: 0.4rem;
+    border: 1px solid #646cff;
+    color: #646cff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    border: 1.5px solid blue;
+}
+
