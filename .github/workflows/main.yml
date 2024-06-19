@@ -1,44 +1,31 @@
-name: CI
+name: Deploy to GitHub Pages
 
-# ...
+on:
+  push:
+    branches:
+      - main  # or the branch you want to deploy from
 
 jobs:
-  build:
-    # ...
-
-  test:
-    name: Test
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Run Tests
-        run: 
+      - name: Checkout the repository
+        uses: actions/checkout@v3
 
-      - name: Setup Pages
-        if: github.ref == 'refs/heads/main'
-        uses: actions/configure-pages@v3
-
-      - name: Upload Artifact
-        if: github.ref == 'refs/heads/main'
-        uses: actions/upload-pages-artifact@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          # location of the coverage artifacts
-          path: "./coverage"
+          node-version: '20.11.1'  # specify the node version you are using
 
-  deploy-coverage:
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    needs: test
-    
-    permissions:
-      pages: write
-      id-token: write
+      - name: Install dependencies
+        run: npm install
 
-    environment:
-      # environment created automatically by GitHub
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      - name: Build the project
+        run: npm run build
 
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
